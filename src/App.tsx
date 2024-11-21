@@ -1,30 +1,28 @@
-import "./styles/App.scss";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import './styles/App.scss';
 
+// Импортируйте ваши страницы
+import Home from './pages/Home';
+// import Portfolio from './pages/Portfolio';
+// import PortfolioVisual from './pages/PortfolioVisual';
+// import PortfolioPhoto from './pages/PortfolioPhoto';
+// import Services from './pages/Services';
+import About from './pages/About';
 
-function App() {
+const App: React.FC = () => {
   return (
     <>
-      <Header />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/* <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/portfolio/visual" element={<PortfolioVisual />} />
+        <Route path="/portfolio/mobile" element={<PortfolioPhoto />} />
+        <Route path="/services" element={<Services />} /> */}
+        <Route path="/about" element={<About />} />
+      </Routes>
     </>
   );
-}
-
-// const App: React.FC = () => {
-//   return (
-//     <Router>
-//       <Routes>
-//         <Route path="/" element={<Home />} />
-//         <Route path="/portfolio" element={<Portfolio />} />
-//          <Route path="/portfolio/visual" element={<PortfolioVisual />} />
-//          <Route path="/portfolio/mobile" element={<PortfolioPhoto />} />
-//         <Route path="/services" element={<Services />} />
-//         <Route path="/about" element={<About />} />
-//       </Routes>
-//     </Router>
-//   );
-// };
+};
 
 export default App;
