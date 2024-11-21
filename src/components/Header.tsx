@@ -5,25 +5,28 @@
 // Навигация по разделам (например, "Портфолио", "Услуги и цены", "Контакты", "Обо мне").
 // Мобильная версия, где меню сворачивается в выпадающий список.
 
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from "react-router-dom";
 import "../styles/Header.scss";
 
 const Header: React.FC = () => {
+  const headerRef = useRef<HTMLElement>(null);
+
   useEffect(() => {
-    const headerElement = document.querySelector(".header");
-    if (headerElement) {
-      headerElement.classList.add("header--visible");
+    if (headerRef.current) {
+      headerRef.current.classList.add("header--visible");
     }
   }, []);
 
-  const [isPortfolioOpen, setIsPortfolioOpen] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isPortfolioOpen, setIsPortfolioOpen] = useState<boolean>(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
   useEffect(() => {
     if (isMobileMenuOpen) {
       setIsPortfolioOpen(true);
+    }
+    else if (!isMobileMenuOpen) {
+      setIsPortfolioOpen(false);
     }
   }, [isMobileMenuOpen]);
 
@@ -36,7 +39,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="header">
+    <header className="header" ref={headerRef}>
       <div className="header__logo">
         <Link to="/">dashkens</Link>
       </div>
@@ -56,7 +59,7 @@ const Header: React.FC = () => {
             <div className="header__dropdown">
               <span
                 className="header__link"
-                onClick={() => togglePortfolioMenu}
+                onClick={togglePortfolioMenu}
                 onMouseEnter={() => setIsPortfolioOpen(true)}
                 onMouseLeave={() => setIsPortfolioOpen(false)}
               >
