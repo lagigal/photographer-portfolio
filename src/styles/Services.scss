@@ -1,0 +1,74 @@
+.services {
+  background-color: rgb(255, 252, 247);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #333;
+
+  &__title {
+    font-family: "Forum";
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    padding: 1.5rem 1rem 1rem;
+    margin: 0;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2rem;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 50px;
+    height: 450px;
+    min-width: 400px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+
+    &__title {
+        margin: 1rem;
+        font-size: 1.5rem;
+    }
+
+    &__price {
+        margin: 0;
+        align-items: end;
+        font-size: 1.5rem;
+    }
+
+    &__note {
+        margin: 0;
+    }
+
+    &__list {
+      font-size: 1rem;
+      list-style: none;
+      text-align: left;
+      padding: 0.5rem;
+    }
+  }
+
+
+  @media (max-width: 700px) {
+    &__container {
+      flex-direction: column;
+    }
+
+    &-card {
+        height: auto;
+        min-width: 90%;
+    }
+  }
+}

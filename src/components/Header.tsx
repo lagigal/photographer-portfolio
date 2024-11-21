@@ -24,9 +24,11 @@ const Header: React.FC = () => {
   useEffect(() => {
     if (isMobileMenuOpen) {
       setIsPortfolioOpen(true);
+      document.body.style.overflow = "hidden";
     }
     else if (!isMobileMenuOpen) {
       setIsPortfolioOpen(false);
+      document.body.style.overflow = "";
     }
   }, [isMobileMenuOpen]);
 
