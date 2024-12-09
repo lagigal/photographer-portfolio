@@ -29,7 +29,7 @@ export const Gallery: React.FC<GalleryProps> = ({ images, videos }) => {
           />
         ))}
         {videos?.map((vidSrc, index) => (
-          <video controls width={300} key={index} preload="metadata">
+          <video controls width={300} key={index} poster={vidSrc.replace("/video/upload/", "/video/upload/so_0/").replace(".mp4", ".jpg")}>
             <source className="gallery__vid" src={vidSrc} />
           </video>
         ))}
