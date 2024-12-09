@@ -29,7 +29,7 @@ export const Gallery: React.FC<GalleryProps> = ({ images, videos }) => {
           />
         ))}
         {videos?.map((vidSrc, index) => (
-          <video controls width={300} key={index}>
+          <video controls width={300} key={index} preload="metadata">
             <source className="gallery__vid" src={vidSrc} />
           </video>
         ))}
