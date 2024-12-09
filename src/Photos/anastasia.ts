@@ -1,0 +1,32 @@
+const photos: string[] = [
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694723/5264796273674936488_jvekod.jpg",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694645/5264796273674936486_ifmv33.jpg",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694643/5264796273674936483_yih6hy.jpg",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694641/5264796273674936482_o18yya.jpg",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694638/5264796273674936485_yzoymq.jpg",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694634/5264796273674936484_cqf3sa.jpg",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694632/5264796273674936481_w3vfgx.jpg",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694630/5264796273674936480_lobmzh.jpg",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694628/5264796273674936479_i0s4g4.jpg",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694621/5264796273674936487_vxlgxd.jpg",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694573/5264796273674936496_vxrxzf.jpg",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694571/5264796273674936495_lkok3h.jpg",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694569/5264796273674936494_upajgu.jpg",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694567/5264796273674936493_djqopf.jpg",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694565/5264796273674936492_rzlpjh.jpg",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694563/5264796273674936491_nedsrn.jpg",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694561/5264796273674936490_nypdrb.jpg",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694560/5264796273674936489_b48tsq.jpg",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694528/5264796273674936501_vmleu1.jpg",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694526/5264796273674936500_mciwnf.jpg",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694525/5264796273674936506_zpxoer.jpg",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694523/5264796273674936504_c8cbmj.jpg",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694521/5264796273674936503_h7d9a0.jpg",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694520/5264796273674936502_uzupze.jpg",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694518/5264796273674936499_abdi6f.jpg",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694516/5264796273674936498_pegzy5.jpg",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694515/5264796273674936507_zyzusr.jpg",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694514/5264796273674936505_fconxj.jpg"
+]
+
+export default photos;

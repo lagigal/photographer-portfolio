@@ -87,6 +87,9 @@ const Header: React.FC = () => {
                 <li className="header__dropdown-menu-li">
                   <Link to="/portfolio/mobile">Мобильные съемки</Link>
                 </li>
+                <li className="header__dropdown-menu-li">
+                  <Link to="/portfolio/reelsmaker">Рилсмейкер</Link>
+                </li>
               </ul>
             </div>
           </li>

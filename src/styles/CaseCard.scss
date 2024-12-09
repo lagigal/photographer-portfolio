@@ -1,0 +1,26 @@
+.caseCard {
+    display: flex;
+    flex-direction: column;
+    transition: all ease-in-out 0.5;
+    padding: 10px;
+    border: solid 1px black;
+    transition: all 0.5s ease-in-out;
+
+
+    &:hover {
+        background-color: rgb(223, 220, 215);;
+    }
+
+    &__img {
+        width: 300px;
+        height: 400px;
+        object-fit: cover;
+    }
+
+    &__title {
+        font-family: "Forum";
+        font-size: 2rem;
+        margin: 0;
+        color: black;
+    } 
+}

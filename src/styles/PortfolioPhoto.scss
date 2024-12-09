@@ -1,0 +1,9 @@
+.portfolioPhoto {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+    width: 100%;
+    justify-content: center;
+    padding: 20px 0;
+}
