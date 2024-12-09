@@ -29,8 +29,8 @@ export const Gallery: React.FC<GalleryProps> = ({ images, videos }) => {
           />
         ))}
         {videos?.map((vidSrc, index) => (
-          <video controls width={300}>
-            <source className="gallery__vid" src={vidSrc} key={index}/>
+          <video controls width={300} key={index}>
+            <source className="gallery__vid" src={vidSrc} />
           </video>
         ))}
       </div>
