@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import './styles/App.scss';
 
 import Home from './pages/Home';
@@ -34,15 +34,12 @@ import case11 from "./Visual/case11.ts"
 import case12 from "./Visual/case12.ts"
 import case13 from "./Visual/case13.ts"
 
-
-
-
 const App: React.FC = () => {
   return (
-    <>
+    <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/portfolio" element={<Portfolio />} />*/}
+        {/* <Route path="/portfolio" element={<Portfolio />} /> */}
         <Route path="/portfolio/visual" element={<PortfolioVisual />} />
         <Route path="/portfolio/mobile" element={<PortfolioPhoto />} /> 
         <Route path="/portfolio/reels" element={<PortfolioReels/>} />
@@ -74,7 +71,7 @@ const App: React.FC = () => {
         <Route path='/case12' element={<Gallery images={case12}/>}/>
         <Route path='/case13' element={<Gallery images={case13}/>}/>
       </Routes>
-    </>
+    </Router>
   );
 };
 
