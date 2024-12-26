@@ -1,0 +1,101 @@
+.custom-slider {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 400px; // Высота контейнера слайдера
+  }
+
+  &__slide {
+    position: absolute;
+    top: 0;
+    width: 60%; // Ширина текущего слайда
+    height: 100%; // Высота наследуется от контейнера
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0;
+
+    img {
+      width: 100%; // Масштабируем ширину до контейнера
+      height: 100%; // Масштабируем высоту до контейнера
+      object-fit: contain; // Вписываем изображение в контейнер, сохраняя пропорции
+      border-radius: 10px;
+    }
+
+    &--prev {
+      transform: translateX(-90%) scale(0.8); // Сдвиг влево для предыдущего слайда
+      opacity: 0.7;
+      z-index: 1;
+    }
+
+    &--active {
+      transform: translateX(0) scale(1); // Центральный слайд
+      opacity: 1;
+      z-index: 2;
+    }
+
+    &--next {
+      transform: translateX(90%) scale(0.8); // Сдвиг вправо для следующего слайда
+      opacity: 0.7;
+      z-index: 1;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none; // Убираем фон у кнопок
+    color: rgb(89, 89, 89);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 32px; // Увеличиваем размер для стрелок
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--prev {
+      left: 10px;
+    }
+
+    &--next {
+      right: 10px;
+    }
+
+    &:hover {
+      color: rgba(145, 145, 145, 0.8); // Легкая прозрачность при наведении
+    }
+  }
+
+  &__indicators {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+
+    &__indicator {
+      width: 10px;
+      height: 10px;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.3s ease;
+
+      &--active {
+        background: white;
+      }
+    }
+  }
+}
