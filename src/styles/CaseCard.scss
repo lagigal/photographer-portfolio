@@ -1,26 +1,53 @@
 .caseCard {
     display: flex;
     flex-direction: column;
-    transition: all ease-in-out 0.5;
+    align-items: center;
     padding: 10px;
     border: solid 1px black;
     transition: all 0.5s ease;
-
-
+    text-align: center;
+  
     &:hover {
-        background-color: rgb(223, 220, 215);;
+      background-color: rgb(223, 220, 215);
     }
-
+  
     &__img {
-        width: 300px;
-        height: 400px;
-        object-fit: cover;
+      width: 300px;
+      height: 400px;
+      object-fit: cover;
     }
-
+  
     &__title {
-        font-family: "Forum";
-        font-size: 2rem;
-        margin: 0;
-        color: black;
-    } 
-}
+      font-family: "Forum";
+      font-size: 2rem;
+      margin: 10px 0 0;
+      color: black;
+    }
+  
+    &__button {
+        display: flex;
+        flex-direction: row;
+        font-family: 'Forum';
+        font-size: 1.3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #a8a8a834;
+        border-radius: 40px;
+        border: solid 1px #363636;
+        color: #4a4a4a;
+        padding: 0.2rem 0.5rem;
+        gap: 0.3rem;
+    
+        &:hover {
+            cursor: pointer;
+            background-color: #cccccc34;
+            color: #4a4a4a;
+        }
+    }
+  
+    &__link {
+      text-decoration: none; /* убирает подчеркивание для ссылки */
+    }
+  }
+  

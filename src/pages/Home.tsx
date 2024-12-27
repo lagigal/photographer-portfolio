@@ -25,6 +25,7 @@ const Home: React.FC = () => {
             img={
               "https://res.cloudinary.com/deqblcqj7/image/upload/v1733736073/5264796273674936306_pere1z.jpg"
             }
+            showButton
           />
           <CaseCard
             linkTo="/portfolio/mobile"
@@ -32,6 +33,7 @@ const Home: React.FC = () => {
             img={
               "https://res.cloudinary.com/deqblcqj7/image/upload/v1733675391/5343563362543462563_e4ial7.jpg"
             }
+            showButton
           />
           <CaseCard
             linkTo="/portfolio/reels"
@@ -39,6 +41,7 @@ const Home: React.FC = () => {
             img={
               "https://res.cloudinary.com/deqblcqj7/image/upload/v1735240190/IMG_7428_ub2dse.jpg"
             }
+            showButton
           />
         </div>
       </div>

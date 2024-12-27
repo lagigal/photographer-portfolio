@@ -1,6 +1,3 @@
-// компоенент для карточки в портфолио,
-//в который должна передаваться ссылка на роут, по которому будет открываться галерея с конкретным кейсом(человеком)
-
 import { Link } from "react-router-dom";
 import "../styles/CaseCard.scss";
 
@@ -8,18 +5,24 @@ interface CaseCardProps {
   linkTo: string;
   img: string;
   title: string;
+  showButton?: boolean;
 }
 
-const CaseCard: React.FC<CaseCardProps> = ({ linkTo, img, title }) => {
+const CaseCard: React.FC<CaseCardProps> = ({ linkTo, img, title, showButton = false }) => {
   return (
-    <>
-      <Link to={linkTo} className="caseCard">
+    <div className="caseCard">
+      <Link to={linkTo} className="caseCard__link">
         <div>
           <img className="caseCard__img" src={img} alt={title} />
           <p className="caseCard__title">{title}</p>
         </div>
       </Link>
-    </>
+      {showButton && (
+        <Link to={linkTo} className="caseCard__button">
+          Смотреть больше
+        </Link>
+      )}
+    </div>
   );
 };
 
