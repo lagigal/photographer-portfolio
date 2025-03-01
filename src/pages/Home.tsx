@@ -36,7 +36,7 @@ const Home: React.FC = () => {
             showButton
           />
           <CaseCard
-            linkTo="/portfolio/reels"
+            linkTo="/my-self"
             title="Рилсмейкер"
             img={
               "https://res.cloudinary.com/deqblcqj7/image/upload/v1735240190/IMG_7428_ub2dse.jpg"

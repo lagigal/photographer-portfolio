@@ -53,8 +53,8 @@ const App: React.FC = () => {
         <Route path='/tatiana' element={<Gallery videos={TatianaMedia.videos}/> }/>
 
         <Route path='/my-self' element={<Gallery videos={mySelfReels}/>}/>
-        <Route path='/roza' element={<Gallery videos={rozaReels}/>}/>
-        <Route path='/tatiana-reels' element={<Gallery videos={[TatianaMedia.videos[0]]}/>}/>
+        {/* <Route path='/roza' element={<Gallery videos={rozaReels}/>}/>
+        <Route path='/tatiana-reels' element={<Gallery videos={[TatianaMedia.videos[0]]}/>}/> */}
 
         <Route path='/case1' element={<Gallery images={case1}/>}/>
         <Route path='/case2' element={<Gallery images={case2}/>}/>
