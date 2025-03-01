@@ -24,6 +24,7 @@ const images: string[] = [
     "https://res.cloudinary.com/deqblcqj7/image/upload/v1733675309/5348243751614669712_hsfigp.jpg",
     "https://res.cloudinary.com/deqblcqj7/image/upload/v1733675309/5348243751614669711_qxdjxk.jpg",
     "https://res.cloudinary.com/deqblcqj7/image/upload/v1733675308/5348243751614669710_jut4i9.jpg",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1740861720/ec66232e-bd5b-481c-8924-4c75077cb37e.png"
   ];  
 
   export default images

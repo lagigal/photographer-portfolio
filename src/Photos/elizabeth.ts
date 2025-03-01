@@ -11,6 +11,9 @@ const photos: string[] = [
     "https://res.cloudinary.com/deqblcqj7/image/upload/v1733695518/5264796273674936452_jdn9q6.jpg",
     "https://res.cloudinary.com/deqblcqj7/image/upload/v1733695515/5264796273674936453_z8kvrp.jpg",
     "https://res.cloudinary.com/deqblcqj7/image/upload/v1733695514/5264796273674936451_kilpd5.jpg",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1740861332/8228c29d-45c4-4ee2-a4e6-161bb9cecda5.png",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1740861364/13882dc3-dd2d-4f19-8976-8550a44ef7dd.png",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1740861395/8530cac5-b977-43f0-9806-17f93cd91199.png"
 ]
 
 export default {videos, photos}

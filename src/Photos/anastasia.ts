@@ -1,5 +1,6 @@
 const photos: string[] = [
     "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694723/5264796273674936488_jvekod.jpg",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1740860847/755c675d-8c71-4de5-af36-4a918e691ff7.png",
     "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694645/5264796273674936486_ifmv33.jpg",
     "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694643/5264796273674936483_yih6hy.jpg",
     "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694641/5264796273674936482_o18yya.jpg",
@@ -9,11 +10,7 @@ const photos: string[] = [
     "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694630/5264796273674936480_lobmzh.jpg",
     "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694628/5264796273674936479_i0s4g4.jpg",
     "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694621/5264796273674936487_vxlgxd.jpg",
-    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694573/5264796273674936496_vxrxzf.jpg",
-    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694571/5264796273674936495_lkok3h.jpg",
     "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694569/5264796273674936494_upajgu.jpg",
-    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694567/5264796273674936493_djqopf.jpg",
-    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694565/5264796273674936492_rzlpjh.jpg",
     "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694563/5264796273674936491_nedsrn.jpg",
     "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694561/5264796273674936490_nypdrb.jpg",
     "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694560/5264796273674936489_b48tsq.jpg",
@@ -26,7 +23,11 @@ const photos: string[] = [
     "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694518/5264796273674936499_abdi6f.jpg",
     "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694516/5264796273674936498_pegzy5.jpg",
     "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694515/5264796273674936507_zyzusr.jpg",
-    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694514/5264796273674936505_fconxj.jpg"
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733694514/5264796273674936505_fconxj.jpg",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1740860887/9c867187-a5e9-4dfa-a460-79315b8b4ed8.png",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1740860911/d8d4a678-7322-4a49-9fe0-5ca2f376b274.png",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1740860927/b375e65d-f430-4766-9ea3-b5aad01b9c66.png",
+
 ]
 
 export default photos;

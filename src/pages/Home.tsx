@@ -23,7 +23,7 @@ const Home: React.FC = () => {
             linkTo="/portfolio/visual"
             title="Визуальные концепции"
             img={
-              "https://res.cloudinary.com/deqblcqj7/image/upload/v1733736073/5264796273674936306_pere1z.jpg"
+              "https://res.cloudinary.com/deqblcqj7/image/upload/v1740859846/fb2f996f-f1c6-432b-8e4c-e010b50cc092.png"
             }
             showButton
           />
@@ -31,15 +31,15 @@ const Home: React.FC = () => {
             linkTo="/portfolio/mobile"
             title="Мобильная съемка"
             img={
-              "https://res.cloudinary.com/deqblcqj7/image/upload/v1733675391/5343563362543462563_e4ial7.jpg"
+              "https://res.cloudinary.com/deqblcqj7/image/upload/v1740860103/d2a216c0-cede-4233-b663-0b555468966f.png"
             }
             showButton
           />
           <CaseCard
             linkTo="/my-self"
-            title="Рилсмейкер"
+            title="Видеосъемка и монтаж"
             img={
-              "https://res.cloudinary.com/deqblcqj7/image/upload/v1735240190/IMG_7428_ub2dse.jpg"
+              "https://res.cloudinary.com/deqblcqj7/image/upload/v1740860161/6d7a13e3-4867-45f7-949c-8425783700e9.png"
             }
             showButton
           />

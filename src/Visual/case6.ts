@@ -1,7 +1,8 @@
 const images: string[] = [
-    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733733018/5264796273674936411_btw7px.jpg",
-    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733733020/5264796273674936412_g1o9o4.jpg",
-    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733733022/5264796273674936413_qqnjon.jpg"
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733733277/5264796273674936404_pjzs0f.jpg",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733733275/5264796273674936405_xglgvs.jpg",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733733273/5264796273674936407_fqgfdd.jpg",
+    "https://res.cloudinary.com/deqblcqj7/image/upload/v1733733271/5264796273674936406_etquez.jpg"
 ]
 
 export default images;
