@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import Services from './pages/Services';
 import About from './pages/About';
 import PortfolioPhoto from './pages/PortfolioPhoto';
-import PortfolioReels from './pages/PortfolioReels.tsx';
+// import PortfolioReels from './pages/PortfolioReels.tsx';
 import PortfolioVisual from './pages/PortfolioVisual.tsx';
 import { Gallery } from './components/Gallery';
 
@@ -17,7 +17,7 @@ import emineImages from "./Photos/emine.ts"
 import jewelryBrandImages from "./Photos/jewelry-brand.ts";
 import TatianaMedia from "./Photos/tatiana.ts";
 
-import rozaReels from "./Reels/roza.ts"
+// import rozaReels from "./Reels/roza.ts"
 import mySelfReels from "./Reels/my-self.ts"
 
 import case1 from "./Visual/case1.ts"
@@ -41,7 +41,7 @@ const App: React.FC = () => {
         <Route path="/" element={<Home />} />
         <Route path="/portfolio/visual" element={<PortfolioVisual />} />
         <Route path="/portfolio/mobile" element={<PortfolioPhoto />} /> 
-        <Route path="/portfolio/reels" element={<PortfolioReels/>} />
+        {/* <Route path="/portfolio/reels" element={<PortfolioReels/>} /> */}
         <Route path="/services" element={<Services />} />
         <Route path="/about" element={<About />} />
 

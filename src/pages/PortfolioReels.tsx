@@ -1,3 +1,5 @@
+// Этот компонент не используется тк рилс порфолио это только работы Даши,
+// но в будущем можно будет поменять путь в Home на нужный(он еще остался в роутинге) и все заработает
 import CaseCard from "../components/CaseCard";
 import Footer from "../components/Footer";
 import GoBackButton from "../components/GoBackButton";
