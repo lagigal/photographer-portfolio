@@ -33,10 +33,12 @@ import case10 from "./Visual/case10.ts"
 import case11 from "./Visual/case11.ts"
 import case12 from "./Visual/case12.ts"
 import case13 from "./Visual/case13.ts"
+import ScrollToTop from './components/ScrollToTop.tsx';
 
 const App: React.FC = () => {
   return (
     <Router>
+        <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/portfolio/visual" element={<PortfolioVisual />} />
