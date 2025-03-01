@@ -3,11 +3,13 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../styles/Services.scss";
+import GoBackButton from "../components/GoBackButton";
 
 const Services: React.FC = () => {
   return (
     <>
       <Header />
+      <GoBackButton />
       <section className="services">
         <h1 className="services__title">
           Мобильная съемка / Визуальная концепция

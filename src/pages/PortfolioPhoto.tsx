@@ -1,11 +1,13 @@
 import CaseCard from "../components/CaseCard"
 import Footer from "../components/Footer"
+import GoBackButton from "../components/GoBackButton"
 import Header from "../components/Header"
 import "../styles/PortfolioPhoto.scss"
 
 const PortfolioPhoto: React.FC = () => {
     return (<>
     <Header/>
+    <GoBackButton />
     <div className="portfolioPhoto">
     <CaseCard
         linkTo="/anastasia"

@@ -1,7 +1,7 @@
-import { useNavigate } from "react-router-dom";
 import "../styles/Gallery.scss";
 import Header from "./Header";
 import Footer from "./Footer";
+import GoBackButton from "./GoBackButton";
 
 interface GalleryProps {
   images?: string[];
@@ -9,16 +9,11 @@ interface GalleryProps {
 }
 
 export const Gallery: React.FC<GalleryProps> = ({ images, videos }) => {
-  const navigate = useNavigate();
-  const goBack = ():void => {
-    navigate(-1)
-  }
-
   return (
     <>
     <Header/>
       <div className="gallery">
-        <button className="gallery__button" onClick={goBack}>	&larr; Назад</button>
+        <GoBackButton />
         {images?.map((imgSrc, index) => (
           <img
             className="gallery__img"

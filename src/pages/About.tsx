@@ -4,10 +4,12 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import dashaContacts from '../assets/dashaContacts.jpg'
 import '../styles/About.scss'
+import GoBackButton from '../components/GoBackButton';
 
 const About: React.FC = () => {
   return (<>
     <Header />
+    <GoBackButton />
     <h1 className='about__title'>Вы можете задать мне любой интересующий Вас вопрос<br/> и&nbsp;договориться о&nbsp;сотрудничестве<br/> по&nbsp;ссылкам ниже&#128140;</h1>
     <div className='about__image-box'>
     <img className="about__image" src={dashaContacts} />
