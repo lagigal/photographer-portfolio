@@ -8,7 +8,12 @@ interface CaseCardProps {
   showButton?: boolean;
 }
 
-const CaseCard: React.FC<CaseCardProps> = ({ linkTo, img, title, showButton = false }) => {
+const CaseCard: React.FC<CaseCardProps> = ({
+  linkTo,
+  img,
+  title,
+  showButton = false,
+}) => {
   return (
     <div className="caseCard">
       <Link to={linkTo} className="caseCard__link">

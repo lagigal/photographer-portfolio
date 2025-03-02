@@ -23,12 +23,12 @@ const PortfolioReels: React.FC = () => {
           title="my self"
         />
         <CaseCard
-        linkTo="/tatiana-reels"
-        img={
-          "https://res.cloudinary.com/deqblcqj7/image/upload/v1733703713/9710bf31-cc61-4592-82ae-27549a69700e.png"
-        }
-        title="tatiana"
-      />
+          linkTo="/tatiana-reels"
+          img={
+            "https://res.cloudinary.com/deqblcqj7/image/upload/v1733703713/9710bf31-cc61-4592-82ae-27549a69700e.png"
+          }
+          title="tatiana"
+        />
       </div>
       <Footer />
     </>

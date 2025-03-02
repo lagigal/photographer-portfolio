@@ -1,31 +1,32 @@
 .about {
-box-sizing: border-box;
+  box-sizing: border-box;
 
-&__title {
+  &__title {
     font-family: "Forum";
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #333;
     padding: 1rem;
     margin: 0;
     background-color: rgb(255, 252, 247);
-}
 
-&__image {
+    img {
+      vertical-align: middle;
+    }
+  }
+
+  &__image {
     padding: 1rem;
     width: 500px;
-    height: 500px;
 
     &-box {
-            background-color: rgb(255, 252, 247);
-        }
-}
-
-@media (max-width: 700px) {
-    &__image {
-        width: 300px;
-    height: 300px;
+      background-color: rgb(255, 252, 247);
     }
-}
+  }
 
+  @media (max-width: 700px) {
+    &__image {
+      width: 300px;
+    }
+  }
 }

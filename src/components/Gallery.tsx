@@ -11,7 +11,7 @@ interface GalleryProps {
 export const Gallery: React.FC<GalleryProps> = ({ images, videos }) => {
   return (
     <>
-    <Header/>
+      <Header />
       <div className="gallery">
         <GoBackButton />
         {images?.map((imgSrc, index) => (
@@ -24,12 +24,19 @@ export const Gallery: React.FC<GalleryProps> = ({ images, videos }) => {
           />
         ))}
         {videos?.map((vidSrc, index) => (
-          <video controls width={300} key={index} poster={vidSrc.replace("/video/upload/", "/video/upload/so_0/").replace(".mp4", ".jpg")}>
+          <video
+            controls
+            width={300}
+            key={index}
+            poster={vidSrc
+              .replace("/video/upload/", "/video/upload/so_0/")
+              .replace(".mp4", ".jpg")}
+          >
             <source className="gallery__vid" src={vidSrc} />
           </video>
         ))}
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };

@@ -16,12 +16,12 @@ const Footer: React.FC = () => {
     <footer className="footer" ref={footerRef}>
       <div className="footer__title-box">
         <h2 className="footer__title">dashkens </h2>
-        <h2 className="footer__title">content-creator Крым | Симферополь</h2>
+        <h2 className="footer__title">Крым | Симферополь</h2>
       </div>
       <div className="footer__buttons">
         <button
           className="footer__button"
-          onClick={() => window.open('https://t.me/darbth', '_blank')}
+          onClick={() => window.open("https://t.me/darbth", "_blank")}
           role="link"
         >
           Договориться о съемке
@@ -29,7 +29,9 @@ const Footer: React.FC = () => {
         </button>
         <button
           className="footer__button"
-          onClick={() => window.open('https://www.instagram.com/dashkens/', '_blank')}
+          onClick={() =>
+            window.open("https://www.instagram.com/dashkens/", "_blank")
+          }
           role="link"
         >
           Подписаться

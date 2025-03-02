@@ -15,17 +15,16 @@
     opacity: 1;
   }
 
-
   &__title {
-    font-family: 'Forum';
+    font-family: "Forum";
     font-size: 1.5rem;
     color: #363636;
     margin: 0;
 
     &-box {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 1rem;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1rem;
     }
   }
 
@@ -33,13 +32,13 @@
     display: flex;
     align-content: space-between;
     background-color: transparent;
-    gap: 4rem
+    gap: 4rem;
   }
 
   &__button {
     display: flex;
     flex-direction: row;
-    font-family: 'Forum';
+    font-family: "Forum";
     font-size: 1.3rem;
     display: flex;
     align-items: center;
@@ -52,13 +51,13 @@
     gap: 0.3rem;
 
     &:hover {
-        cursor: pointer;
-        background-color: #cccccc34
+      cursor: pointer;
+      background-color: #cccccc34;
     }
   }
 
   &__description {
-    font-family: 'Forum';
+    font-family: "Forum";
     font-size: 1rem;
     color: #4f4f4f;
     margin: 1rem 0;
@@ -66,8 +65,8 @@
 
   @media (max-width: 700px) {
     &__buttons {
-        flex-direction: column;
-        gap: 1rem;
+      flex-direction: column;
+      gap: 1rem;
     }
   }
 }

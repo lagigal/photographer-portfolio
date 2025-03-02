@@ -9,8 +9,6 @@ const images = [
   "https://res.cloudinary.com/deqblcqj7/image/upload/v1740863855/photo_1_2025-03-02_00-16-58_nbkx2j.jpg",
   "https://res.cloudinary.com/deqblcqj7/image/upload/v1740862675/566d5e28-8ff7-40d0-9deb-dd60605d8fea.png",
   "https://res.cloudinary.com/deqblcqj7/image/upload/v1733675391/5343563362543462563_e4ial7.jpg",
-
-
 ];
 
 const CustomSlider: React.FC = () => {

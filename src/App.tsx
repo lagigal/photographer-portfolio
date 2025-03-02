@@ -64,8 +64,6 @@ const App: React.FC = () => {
         <Route path='/cosmetology' element={<Gallery images={cosmetology.photos} videos={cosmetology.videos}/> }/>
         <Route path='/ekaterina' element={<Gallery images={ekaterina.photos} videos={ekaterina.videos}/> }/>
 
-
-
         <Route path='/my-self' element={<Gallery videos={mySelfReels}/>}/>
         {/* <Route path='/roza' element={<Gallery videos={rozaReels}/>}/>
         <Route path='/tatiana-reels' element={<Gallery videos={[TatianaMedia.videos[0]]}/>}/> */}

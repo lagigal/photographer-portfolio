@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../styles/Services.scss";
 import GoBackButton from "../components/GoBackButton";
+import TelegramButton from "../components/TelegramButton";
 
 const Services: React.FC = () => {
   return (
@@ -16,61 +17,137 @@ const Services: React.FC = () => {
         </h1>
         <div className="services__container">
           <div className="services-card">
-            <h2 className="services-card__title">Мобильная контент-съемка</h2>
+            <h2 className="services-card__title">Мобильная съемка</h2>
             <ul className="services-card__list">
-              <li>— Бриф-анкета/созвон</li>
+              <li>— Обсуждение идеи съёмки</li>
               <li>— Мудборд с локациями, образами, позами</li>
-              <li>— Мобильная съемка</li>
-              <li>— До 30 фотографий в обработке + исходники</li>
+              <li>— Организация съемки полностью на мне</li>
+              <li>— Съемка 1,5 часа</li>
+              <li>
+                — До 30 фотографий в обработке + исходники + маленькие видео без
+                монтажа
+              </li>
+              <li>
+                — За 1,5 часа съёмки можно снять 1-2 образа в нескольких
+                локациях
+              </li>
+              <li>
+                дополнительные расходы (аренда студий, работа моделей, реквизит
+                и тд.) оплачиваются отдельно клиентом
+              </li>
             </ul>
-            <p className="services-card__price">1 500 р/час</p>
+            {/* <p className="services-card__price">от 1 500 р/час</p> */}
+            <TelegramButton text="Узнать цену" />
           </div>
           <div className="services-card">
-            <h2 className="services-card__title">Визуал + контент-съемка</h2>
+            <h2 className="services-card__title">Визуал под ключ</h2>
             <ul className="services-card__list">
               <li>— Бриф-анкета/созвон</li>
-              <li>— Майнд-карта</li>
-              <li>— Составление визуальной концепции 12/15 постов</li>
+              <li>— Анализ существующего визуала</li>
+              <li>— Распаковка личности/бренда</li>
+              <li>
+                — Создание визуальной концепций на основе выявленных смыслов и
+                целей, подбор референсов
+              </li>
               <li>— Мудборд с локациями, образами, позами</li>
-              <li>— Мобильная съемка</li>
-              <li>— До 30 фотографий в обработке + исходники</li>
-              <li>— Составление визуала</li>
+              <li>— Организация и проведение съемки</li>
+              <li>— Отбор, кадрирование, ретушь, цветокоррекция фотографий</li>
+              <li>— Составление сетки визуала на 15 кадров</li>
+              <li>— До 30 фото дополнительно для серий</li>
+              <li>
+                дополнительные расходы (аренда студий, работа моделей, реквизит
+                и тд.) оплачиваются отдельно клиентом
+              </li>
             </ul>
-            <p className="services-card__price">4 500 р/час</p>
+            {/* <p className="services-card__price">4 500 р/час</p> */}
+            <TelegramButton text="Узнать цену" />
           </div>
           <div className="services-card">
             <h2 className="services-card__title">Визуальная концепция</h2>
             <ul className="services-card__list">
               <li>— Бриф-анкета/созвон</li>
-              <li>— Майнд-карта</li>
-              <li>— Составление визуальной концепции 12/15 постов</li>
+              <li>— Анализ существующего визуала</li>
+              <li>— Распаковка личности/бренда</li>
+              <li>
+                — Составление сетки визуала на 15 кадров на основе выявленных
+                смыслов и целей, подбор референсов
+              </li>
+              <li>
+                дополнительно можно оформить аватарку, шапку профиля, акутальные
+                и обложки на reels
+              </li>
             </ul>
-            <p className="services-card__price">3 500 р/час</p>
+            {/* <p className="services-card__price">3 500 р/час</p> */}
+            <TelegramButton text="Узнать цену" />
+          </div>
+          <div className="services-card">
+            <h2 className="services-card__title">Консультация</h2>
+            <ul className="services-card__list">
+              <li>
+                — Любой ваш запрос на тему визуала, профиля, ведения инстаграма,
+                обработка, оформление сторис и т.д
+              </li>
+              <li>
+                — Готовлю материал по вашему вопросу в виде презентации и
+                созваниемся по видео звонку
+              </li>
+              <li>
+                — Делюсь лайфаками, полезными приложениями, даю практические
+                советы
+              </li>
+              <li>— Созвон до 1,5 часа</li>
+              <li></li>
+            </ul>
+            {/* <p className="services-card__price">от 1 500 р/час</p> */}
+            <TelegramButton text="Узнать цену" />
           </div>
         </div>
-        <h1 className="services__title">
-          Reels
-        </h1>
+        <h1 className="services__title">Reels</h1>
         <div className="services__container">
           <div className="services-card">
-            <h2 className="services-card__title">Сценарий Reels</h2>
+            <h2 className="services-card__title">Съемка Reels</h2>
             <ul className="services-card__list">
-              <li>— Какой-то текст и еще что-то где-то как-то</li>
-              <li>— Какой-то текст</li>
-              <li>— Какой-то текст</li>
-              <li>— Какой-то текст</li>            </ul>
-            <p className="services-card__price">1 500 р/час</p>
+              <li>— Обсуждение идеи съёмки</li>
+              <li>— Сценарий для каждого reels</li>
+              <li>— Мудборд с локациями, образами, позами</li>
+              <li>— Организация и проведение съемки</li>
+              <li>— Отбор, кадрирование, ретушь, цветокоррекция видео</li>
+              <li>— Монтаж снятых видео</li>
+              <li>
+                дополнительные расходы (аренда студий, работа моделей, реквизит
+                и тд.) оплачиваются отдельно клиентом
+              </li>
+            </ul>
+            {/* <p className="services-card__price">1 500 р/час</p> */}
+            <TelegramButton text="Узнать цену" />
           </div>
           <div className="services-card">
             <h2 className="services-card__title">Монтаж Reels</h2>
             <ul className="services-card__list">
-              <li>— Какой-то текст</li>
-              <li>— Какой-то текст</li>
-              <li>— Какой-то текст</li>
-              <li>— Какой-то текст</li>            </ul>
-            <p className="services-card__price">1 500 р/час</p>
+              <li>— Формат: базовый, сложный, анимационный</li>
+              <li>— Выбор лучших видео из всего исходного материала</li>
+              <li>— Упорядочивание и создание сюжетной структуры видео</li>
+              <li>— Работа со скоростью и звуковым оформлением</li>
+              <li>— Цветокоррекция</li>
+              <li>— Наложение футуажа, спецэффектов</li>
+              <li>— Моушен-дизайн</li>
+              <li></li>
+            </ul>
+            {/* <p className="services-card__price">1 500 р/час</p> */}
+            <TelegramButton text="Узнать цену" />
           </div>
+          <div className="services-card">
+            <h2 className="services-card__title">ИИ-контент</h2>
+            <ul className="services-card__list">
+              <li>— Нейрофотосессия</li>
+              <li>— Контент для брентов/экспертов</li>
+              <li>— Генерация видео с помощью ИИ</li>
+              <li></li>
+            </ul>
+            {/* <p className="services-card__price">1 500 р/час</p> */}
+            <TelegramButton text="Узнать цену" />
           </div>
+        </div>
       </section>
       <Footer />
     </>

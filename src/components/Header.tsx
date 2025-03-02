@@ -5,10 +5,9 @@
 // Навигация по разделам (например, "Портфолио", "Услуги и цены", "Контакты", "Обо мне").
 // Мобильная версия, где меню сворачивается в выпадающий список.
 
-import React, { useEffect, useRef, useState } from 'react';
-import { Link } from "react-router-dom";
+import React, { useEffect, useRef, useState } from "react";
 import "../styles/Header.scss";
-
+import { Link } from "react-router-dom";
 const Header: React.FC = () => {
   const headerRef = useRef<HTMLElement>(null);
 
@@ -25,8 +24,7 @@ const Header: React.FC = () => {
     if (isMobileMenuOpen) {
       setIsPortfolioOpen(true);
       document.body.style.overflow = "hidden";
-    }
-    else if (!isMobileMenuOpen) {
+    } else if (!isMobileMenuOpen) {
       setIsPortfolioOpen(false);
       document.body.style.overflow = "";
     }
@@ -44,6 +42,11 @@ const Header: React.FC = () => {
     <header className="header" ref={headerRef}>
       <div className="header__logo">
         <Link to="/">dashkens</Link>
+        <img
+          src="https://res.cloudinary.com/deqblcqj7/image/upload/v1740950865/%D0%9B%D0%B8%D1%81%D1%82%D0%B8%D0%BA_ew9nsg.png"
+          alt="Логотип"
+          width="45"
+        />
       </div>
       <button
         className={`header__burger ${isMobileMenuOpen ? "active" : ""}`}
@@ -61,7 +64,7 @@ const Header: React.FC = () => {
             <div className="header__dropdown">
               <span
                 className="header__link"
-                onClick={togglePortfolioMenu}
+                onClick={isMobileMenuOpen ? () => {} : togglePortfolioMenu}
                 onMouseEnter={() => setIsPortfolioOpen(true)}
                 onMouseLeave={() => setIsPortfolioOpen(false)}
               >
@@ -88,7 +91,7 @@ const Header: React.FC = () => {
                   <Link to="/portfolio/mobile">Мобильные съемки</Link>
                 </li>
                 <li className="header__dropdown-menu-li">
-                  <Link to="/portfolio/reels">Рилсмейкер</Link>
+                  <Link to="/my-self">Рилсмейкер</Link>
                 </li>
               </ul>
             </div>

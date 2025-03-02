@@ -14,6 +14,13 @@ const Home: React.FC = () => {
         <div className="home__title-box">
           <h1 className="home__title">Дарья Никитенко</h1>
           <p className="home__title-sub">content-creator | photographer</p>
+          <p className="home__title-sub">
+            Я @dashkens – креатор, визуализатор, рилсмейкер <br />
+            занимаюсь созданием креативного, уникального контента для брендов и
+            личных блогов, создаю визуалы, продюсирую съёмки и снимаю рилсы.{" "}
+            <br />В этой сфере я около 3-х лет, постоянно развиваюсь и обучаюсь
+            новому. Буду рада поработать с вами {`<3`}
+          </p>
         </div>
         <h2 className="home__portfolio-title">Примеры моих работ</h2>
         <Slider />
