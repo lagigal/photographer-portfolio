@@ -83,8 +83,8 @@ const Header: React.FC = () => {
               <span
                 className="header__link"
                 onClick={isMobileMenuOpen ? () => {} : togglePortfolioMenu}
-                onMouseEnter={() => setIsPortfolioOpen(true)}
-                onMouseLeave={() => setIsPortfolioOpen(false)}
+                onMouseEnter={isMobileMenuOpen ? () => {} : () => setIsPortfolioOpen(true)}
+                onMouseLeave={isMobileMenuOpen ? () => {} : () => setIsPortfolioOpen(false)}
               >
                 Портфолио
                 <span
