@@ -20,13 +20,31 @@ const Header: React.FC = () => {
   const [isPortfolioOpen, setIsPortfolioOpen] = useState<boolean>(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
+  function lockScroll() {
+    document.body.style.position = "fixed";
+    document.body.style.top = "0";
+    document.body.style.left = "0";
+    document.body.style.right = "0";
+    document.body.style.overflow = "hidden";
+    document.body.style.width = "100%";
+  }
+
+  function unlockScroll() {
+    document.body.style.position = "";
+    document.body.style.top = "";
+    document.body.style.left = "";
+    document.body.style.right = "";
+    document.body.style.overflow = "";
+    document.body.style.width = "";
+  }
+
   useEffect(() => {
     if (isMobileMenuOpen) {
       setIsPortfolioOpen(true);
-      document.body.style.overflow = "hidden";
-    } else if (!isMobileMenuOpen) {
+      lockScroll();
+    } else {
       setIsPortfolioOpen(false);
-      document.body.style.overflow = "";
+      unlockScroll();
     }
   }, [isMobileMenuOpen]);
 
