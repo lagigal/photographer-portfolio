@@ -15,19 +15,17 @@ const CaseCard: React.FC<CaseCardProps> = ({
   showButton = false,
 }) => {
   return (
-    <div className="caseCard">
-      <Link to={linkTo} className="caseCard__link">
+    <Link to={linkTo} className="caseCard__link">
+      <div className="caseCard">
         <div>
           <img className="caseCard__img" src={img} alt={title} />
           <p className="caseCard__title">{title}</p>
         </div>
-      </Link>
-      {showButton && (
-        <Link to={linkTo} className="caseCard__button">
-          Смотреть больше
-        </Link>
-      )}
-    </div>
+        {showButton && (
+          <button className="caseCard__button">Смотреть больше</button>
+        )}
+      </div>
+    </Link>
   );
 };
 

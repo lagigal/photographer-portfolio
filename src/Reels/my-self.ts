@@ -4,6 +4,7 @@ const videos: string[] = [
     "https://res.cloudinary.com/deqblcqj7/video/upload/v1733727044/IMG_0145_spqipk.mp4",
     "https://res.cloudinary.com/deqblcqj7/video/upload/v1733727045/IMG_6508_fgqoau.mp4",
     "https://res.cloudinary.com/deqblcqj7/video/upload/v1733727047/IMG_3875_leswh2.mp4",
+    "https://res.cloudinary.com/deqblcqj7/video/upload/v1741039630/IMG_9933_ykpzr7.mp4",
     "https://res.cloudinary.com/deqblcqj7/video/upload/v1733727047/IMG_8165_qcvkeo.mp4",
     "https://res.cloudinary.com/deqblcqj7/video/upload/v1733727048/IMG_8658_vh6fmy.mp4",
     "https://res.cloudinary.com/deqblcqj7/video/upload/v1733730330/IMG_5651_kibm7r.mp4",

@@ -43,7 +43,7 @@ const Home: React.FC = () => {
             showButton
           />
           <CaseCard
-            linkTo="/my-self"
+            linkTo="/portfolio/reels"
             title="Видеосъемка и монтаж"
             img={
               "https://res.cloudinary.com/deqblcqj7/image/upload/v1740860161/6d7a13e3-4867-45f7-949c-8425783700e9.png"

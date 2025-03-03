@@ -109,7 +109,7 @@ const Header: React.FC = () => {
                   <Link to="/portfolio/mobile">Мобильные съемки</Link>
                 </li>
                 <li className="header__dropdown-menu-li">
-                  <Link to="/my-self">Рилсмейкер</Link>
+                  <Link to="/portfolio/reels">Рилсмейкер</Link>
                 </li>
               </ul>
             </div>
