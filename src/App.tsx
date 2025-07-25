@@ -1,102 +1,122 @@
-import React from 'react';
+import React, { Suspense, lazy, useState, useEffect } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import './styles/App.scss';
 
-import Home from './pages/Home';
-import Services from './pages/Services';
-import About from './pages/About';
-import PortfolioPhoto from './pages/PortfolioPhoto';
-import PortfolioReels from './pages/PortfolioReels.tsx';
-import PortfolioVisual from './pages/PortfolioVisual.tsx';
-import Gallery from './components/Gallery';
 import ScrollToTop from './components/ScrollToTop.tsx';
+import Spinner from './components/Spinner';
 
-import anastasiyaImages from "./Photos/anastasia.ts";
-import anastasiyaImages2 from "./Photos/anastasia2.ts";
-import elizabethImages from "./Photos/elizabeth.ts";
-import dmitryImages from "./Photos/dima.ts";
-import emineImages from "./Photos/emine.ts";
-import jewelryBrandImages from "./Photos/jewelry-brand.ts";
-import TatianaMedia from "./Photos/tatiana.ts";
-import cosmetology from './Photos/cosmetology.ts';
-import ekaterina from './Photos/сatherine.ts';
-import lina from './Photos/lina.ts';
+const Home = lazy(() => import('./pages/Home'));
+const Services = lazy(() => import('./pages/Services'));
+const About = lazy(() => import('./pages/About'));
+const PortfolioPhoto = lazy(() => import('./pages/PortfolioPhoto'));
+const PortfolioReels = lazy(() => import('./pages/PortfolioReels'));
+const PortfolioVisual = lazy(() => import('./pages/PortfolioVisual'));
+const Gallery = lazy(() => import('./components/Gallery'));
 
-import mySelfReels from "./Reels/my-self.ts";
-import filtihReels from "./Reels/filtih.ts";
-import sansusiReels from "./Reels/sansusi.ts"
-import kediReels from "./Reels/kedi-myasoeda.ts"
-import ambroperfumeReels from "./Reels/ambroperfume.ts"
+type DataType = 'photos-only' | 'videos-only' | 'mixed';
 
-import case1 from "./Visual/case1.ts";
-import case2 from "./Visual/case2.ts";
-import case3 from "./Visual/case3.ts";
-import case4 from "./Visual/case4.ts";
-import case5 from "./Visual/case5.ts";
-import case6 from "./Visual/case6.ts";
-import case7 from "./Visual/case7.ts";
-import case8 from "./Visual/case8.ts";
-import case9 from "./Visual/case9.ts";
-import case10 from "./Visual/case10.ts";
-import case11 from "./Visual/case11.ts";
-import case12 from "./Visual/case12.ts";
-import case13 from "./Visual/case13.ts";
-import case14 from "./Visual/case14.ts";
-import case15 from "./Visual/case15.ts";
-import case16 from "./Visual/case16.ts";
-import case17 from "./Visual/case17.ts";
-import case18 from "./Visual/case18.ts";
+interface GalleryLoaderProps {
+  dataPath: string;
+  dataType: DataType;
+}
 
+const GalleryLoader: React.FC<GalleryLoaderProps> = ({ dataPath, dataType }) => {
+  const [media, setMedia] = useState<{ images?: any[]; videos?: any[] } | null>(null);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    const loadMedia = async () => {
+      try {
+        const module = await import(`${dataPath}`);
+        if (isMounted) {
+          switch (dataType) {
+            case 'photos-only':
+              setMedia({ images: module.default });
+              break;
+            case 'videos-only':
+              setMedia({ videos: module.default });
+              break;
+            case 'mixed':
+              setMedia({ images: module.default.photos, videos: module.default.videos });
+              break;
+          }
+        }
+      } catch (error) {
+        console.error("Failed to load gallery data:", error);
+        if (isMounted) setMedia({ images: [], videos: [] });
+      }
+    };
+
+    loadMedia();
+    
+    return () => {
+      isMounted = false;
+    };
+  }, [dataPath, dataType]);
+
+  if (!media) {
+    return <Spinner />;
+  }
+
+  return <Gallery images={media.images} videos={media.videos} />;
+};
 
 
 const App: React.FC = () => {
   return (
     <Router>
       <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/portfolio/visual" element={<PortfolioVisual />} />
-        <Route path="/portfolio/mobile" element={<PortfolioPhoto />} /> 
-        <Route path="/portfolio/reels" element={<PortfolioReels/>} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/about" element={<About />} />
+      <Suspense fallback={<Spinner />}>
+        <Routes>
+          {/* Основные страницы */}
+          <Route path="/" element={<Home />} />
+          <Route path="/portfolio/visual" element={<PortfolioVisual />} />
+          <Route path="/portfolio/mobile" element={<PortfolioPhoto />} />
+          <Route path="/portfolio/reels" element={<PortfolioReels />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/about" element={<About />} />
+          
+          {/* Галереи с фото и/или видео */}
+          <Route path='/anastasia' element={<GalleryLoader dataPath='./Photos/anastasia.ts' dataType='photos-only' />} />
+          <Route path='/anastasia2' element={<GalleryLoader dataPath='./Photos/anastasia2.ts' dataType='mixed' />} />
+          <Route path='/elizabeth' element={<GalleryLoader dataPath='./Photos/elizabeth.ts' dataType='mixed' />} />
+          <Route path='/dmitry' element={<GalleryLoader dataPath='./Photos/dima.ts' dataType='photos-only' />} />
+          <Route path='/emine' element={<GalleryLoader dataPath='./Photos/emine.ts' dataType='mixed' />} />
+          <Route path='/jewelryBrand' element={<GalleryLoader dataPath='./Photos/jewelry-brand.ts' dataType='photos-only' />} />
+          <Route path='/tatiana' element={<GalleryLoader dataPath='./Photos/tatiana.ts' dataType='videos-only' />} />
+          <Route path='/cosmetology' element={<GalleryLoader dataPath='./Photos/cosmetology.ts' dataType='mixed' />} />
+          <Route path='/ekaterina' element={<GalleryLoader dataPath='./Photos/сatherine.ts' dataType='mixed' />} />
+          <Route path='/lina' element={<GalleryLoader dataPath='./Photos/lina.ts' dataType='photos-only' />} />
 
-        <Route path='/anastasia' element={<Gallery images={anastasiyaImages}/> }/>
-        <Route path='/anastasia2' element={<Gallery images={anastasiyaImages2.photos} videos={anastasiyaImages2.videos}/> }/>
-        <Route path='/elizabeth' element={<Gallery images={elizabethImages.photos} videos={elizabethImages.videos}/> }/>
-        <Route path='/dmitry' element={<Gallery images={dmitryImages}/> }/>
-        <Route path='/emine' element={<Gallery images={emineImages.photos} videos={emineImages.videos}/> }/>
-        <Route path='/jewelryBrand' element={<Gallery images={jewelryBrandImages}/> }/>
-        <Route path='/tatiana' element={<Gallery videos={TatianaMedia.videos}/> }/>
-        <Route path='/cosmetology' element={<Gallery images={cosmetology.photos} videos={cosmetology.videos}/> }/>
-        <Route path='/ekaterina' element={<Gallery images={ekaterina.photos} videos={ekaterina.videos}/> }/>
-        <Route path='/lina' element={<Gallery images={lina.photos}/> }/>
+          {/* Галереи с Reels */}
+          <Route path='/my-self' element={<GalleryLoader dataPath='./Reels/my-self.ts' dataType='videos-only' />} />
+          <Route path='/filtih' element={<GalleryLoader dataPath='./Reels/filtih.ts' dataType='videos-only' />} />
+          <Route path='/sansusi' element={<GalleryLoader dataPath='./Reels/sansusi.ts' dataType='videos-only' />} />
+          <Route path='/kedi-myasoeda' element={<GalleryLoader dataPath='./Reels/kedi-myasoeda.ts' dataType='videos-only' />} />
+          <Route path='/ambroperfume' element={<GalleryLoader dataPath='./Reels/ambroperfume.ts' dataType='videos-only' />} />
 
-        <Route path='/my-self' element={<Gallery videos={mySelfReels}/>}/>
-        <Route path='/filtih' element={<Gallery videos={filtihReels}/>}/>
-        <Route path='/sansusi' element={<Gallery videos={sansusiReels}/>}/>
-        <Route path='/kedi-myasoeda' element={<Gallery videos={kediReels}/>}/>
-        <Route path='/ambroperfume' element={<Gallery videos={ambroperfumeReels}/>}/>
-
-        <Route path='/case1' element={<Gallery images={case1}/>}/>
-        <Route path='/case2' element={<Gallery images={case2}/>}/>
-        <Route path='/case3' element={<Gallery images={case3}/>}/>
-        <Route path='/case4' element={<Gallery images={case4}/>}/>
-        <Route path='/case5' element={<Gallery images={case5}/>}/>
-        <Route path='/case6' element={<Gallery images={case6}/>}/>
-        <Route path='/case7' element={<Gallery images={case7}/>}/>
-        <Route path='/case8' element={<Gallery images={case8}/>}/>
-        <Route path='/case9' element={<Gallery images={case9}/>}/>
-        <Route path='/case10' element={<Gallery images={case10}/>}/>
-        <Route path='/case11' element={<Gallery images={case11}/>}/>
-        <Route path='/case12' element={<Gallery images={case12}/>}/>
-        <Route path='/case13' element={<Gallery images={case13}/>}/>
-        <Route path='/case14' element={<Gallery images={case14}/>}/>
-        <Route path='/case15' element={<Gallery images={case15}/>}/>
-        <Route path='/case16' element={<Gallery images={case16}/>}/>
-        <Route path='/case17' element={<Gallery images={case17}/>}/>
-        <Route path='/case18' element={<Gallery images={case18}/>}/>
-      </Routes>
+          {/* Галереи с кейсами (Visual) */}
+          <Route path='/case1' element={<GalleryLoader dataPath='./Visual/case1.ts' dataType='photos-only' />} />
+          <Route path='/case2' element={<GalleryLoader dataPath='./Visual/case2.ts' dataType='photos-only' />} />
+          <Route path='/case3' element={<GalleryLoader dataPath='./Visual/case3.ts' dataType='photos-only' />} />
+          <Route path='/case4' element={<GalleryLoader dataPath='./Visual/case4.ts' dataType='photos-only' />} />
+          <Route path='/case5' element={<GalleryLoader dataPath='./Visual/case5.ts' dataType='photos-only' />} />
+          <Route path='/case6' element={<GalleryLoader dataPath='./Visual/case6.ts' dataType='photos-only' />} />
+          <Route path='/case7' element={<GalleryLoader dataPath='./Visual/case7.ts' dataType='photos-only' />} />
+          <Route path='/case8' element={<GalleryLoader dataPath='./Visual/case8.ts' dataType='photos-only' />} />
+          <Route path='/case9' element={<GalleryLoader dataPath='./Visual/case9.ts' dataType='photos-only' />} />
+          <Route path='/case10' element={<GalleryLoader dataPath='./Visual/case10.ts' dataType='photos-only' />} />
+          <Route path='/case11' element={<GalleryLoader dataPath='./Visual/case11.ts' dataType='photos-only' />} />
+          <Route path='/case12' element={<GalleryLoader dataPath='./Visual/case12.ts' dataType='photos-only' />} />
+          <Route path='/case13' element={<GalleryLoader dataPath='./Visual/case13.ts' dataType='photos-only' />} />
+          <Route path='/case14' element={<GalleryLoader dataPath='./Visual/case14.ts' dataType='photos-only' />} />
+          <Route path='/case15' element={<GalleryLoader dataPath='./Visual/case15.ts' dataType='photos-only' />} />
+          <Route path='/case16' element={<GalleryLoader dataPath='./Visual/case16.ts' dataType='photos-only' />} />
+          <Route path='/case17' element={<GalleryLoader dataPath='./Visual/case17.ts' dataType='photos-only' />} />
+          <Route path='/case18' element={<GalleryLoader dataPath='./Visual/case18.ts' dataType='photos-only' />} />
+        </Routes>
+      </Suspense>
     </Router>
   );
 };

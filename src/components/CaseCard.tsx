@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "../styles/CaseCard.scss";
+import { optimizeUrl } from "../utils";
 
 interface CaseCardProps {
   linkTo: string;
@@ -18,7 +19,7 @@ const CaseCard: React.FC<CaseCardProps> = ({
     <Link to={linkTo} className="caseCard__link">
       <div className="caseCard">
         <div>
-          <img className="caseCard__img" src={img} alt={title} />
+          <img className="caseCard__img" src={optimizeUrl(img)} alt={title} />
           <p className="caseCard__title">{title}</p>
         </div>
         {showButton && (

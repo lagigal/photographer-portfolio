@@ -2,6 +2,7 @@ import "../styles/Gallery.scss";
 import Header from "./Header";
 import Footer from "./Footer";
 import GoBackButton from "./GoBackButton";
+import { optimizeUrl } from "../utils";
 
 interface GalleryProps {
   images?: string[];
@@ -17,7 +18,7 @@ export const Gallery: React.FC<GalleryProps> = ({ images, videos }) => {
         {images?.map((imgSrc, index) => (
           <img
             className="gallery__img"
-            src={imgSrc}
+            src={optimizeUrl(imgSrc)}
             alt={`Photo ${index}`}
             key={imgSrc}
             loading="lazy"
