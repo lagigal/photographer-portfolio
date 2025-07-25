@@ -69,9 +69,16 @@ const PortfolioPhoto: React.FC = () => {
         <CaseCard
           linkTo="/cosmetology"
           img={
-            "https://res.cloudinary.com/deqblcqj7/image/upload/v1740864791/photo_4_2025-03-02_00-32-48_henyxx.jpg"
+            "https://res.cloudinary.com/deqblcqj7/image/upload/v1740864792/photo_6_2025-03-02_00-32-48_yybew1.jpg"
           }
           title="cosmetology"
+        />
+        <CaseCard
+          linkTo="/lina"
+          img={
+            "https://res.cloudinary.com/deqblcqj7/image/upload/v1753437971/IMG_4506_qlts7q.jpg"
+          }
+          title="lina"
         />
       </div>
       <Footer />

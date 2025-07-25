@@ -1,4 +1,4 @@
-const images: string[] = [
+const photos: string[] = [
     "https://res.cloudinary.com/deqblcqj7/image/upload/v1733675436/5343563362543462558_ne23cw.jpg",
     "https://res.cloudinary.com/deqblcqj7/image/upload/v1733675435/5343563362543462557_wfvgno.jpg",
     "https://res.cloudinary.com/deqblcqj7/image/upload/v1733675435/5343563362543462556_v5dfde.jpg",
@@ -27,4 +27,4 @@ const images: string[] = [
     "https://res.cloudinary.com/deqblcqj7/image/upload/v1740861720/ec66232e-bd5b-481c-8924-4c75077cb37e.png"
   ];  
 
-  export default images
+  export default photos

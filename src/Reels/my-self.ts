@@ -1,4 +1,6 @@
 const videos: string[] = [
+    "https://res.cloudinary.com/deqblcqj7/video/upload/v1753443875/IMG_9752_ilycnx.mp4",
+    "https://res.cloudinary.com/deqblcqj7/video/upload/v1753443878/IMG_0461_bhnn2w.mp4",
     "https://res.cloudinary.com/deqblcqj7/video/upload/v1733727042/IMG_0825_pokwlg.mp4",
     "https://res.cloudinary.com/deqblcqj7/video/upload/v1733727043/IMG_8027_c73u6m.mp4",
     "https://res.cloudinary.com/deqblcqj7/video/upload/v1733727044/IMG_0145_spqipk.mp4",
@@ -17,7 +19,6 @@ const videos: string[] = [
     "https://res.cloudinary.com/deqblcqj7/video/upload/v1733730337/IMG_4163_z2iz4w.mp4",
     "https://res.cloudinary.com/deqblcqj7/video/upload/v1733730339/IMG_2832_mkvj16.mp4",
     "https://res.cloudinary.com/deqblcqj7/video/upload/v1733730340/IMG_5047_mlpffp.mp4",
-    "https://res.cloudinary.com/deqblcqj7/video/upload/v1733730479/IMG_2467_relgcb.mp4",
     "https://res.cloudinary.com/deqblcqj7/video/upload/v1733730480/IMG_2471_ebccaz.mp4",
     "https://res.cloudinary.com/deqblcqj7/video/upload/v1733730554/IMG_1234_g9idjx.mp4",
     "https://res.cloudinary.com/deqblcqj7/video/upload/v1733730555/IMG_1713_eojcmh.mp4",

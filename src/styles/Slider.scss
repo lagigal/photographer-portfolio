@@ -15,38 +15,38 @@
     align-items: center;
     position: relative;
     width: 100%;
-    height: 400px; // Высота контейнера слайдера
+    height: 400px;
   }
 
   &__slide {
     position: absolute;
     top: 0;
-    width: 60%; // Ширина текущего слайда
-    height: 100%; // Высота наследуется от контейнера
+    width: 60%;
+    height: 100%;
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
     opacity: 0;
 
     img {
-      width: 100%; // Масштабируем ширину до контейнера
-      height: 100%; // Масштабируем высоту до контейнера
-      object-fit: contain; // Вписываем изображение в контейнер, сохраняя пропорции
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
       border-radius: 10px;
     }
 
     &--prev {
-      transform: translateX(-90%) scale(0.8); // Сдвиг влево для предыдущего слайда
+      transform: translateX(-90%) scale(0.8);
       opacity: 0.7;
       z-index: 1;
     }
 
     &--active {
-      transform: translateX(0) scale(1); // Центральный слайд
+      transform: translateX(0) scale(1);
       opacity: 1;
       z-index: 2;
     }
 
     &--next {
-      transform: translateX(90%) scale(0.8); // Сдвиг вправо для следующего слайда
+      transform: translateX(90%) scale(0.8);
       opacity: 0.7;
       z-index: 1;
     }
@@ -56,13 +56,13 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: none; // Убираем фон у кнопок
+    background: none;
     color: rgb(89, 89, 89);
     border: none;
     padding: 10px;
     cursor: pointer;
     z-index: 5;
-    font-size: 42px; // Увеличиваем размер для стрелок
+    font-size: 42px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,7 +76,7 @@
     }
 
     &:hover {
-      color: rgba(145, 145, 145, 0.8); // Легкая прозрачность при наведении
+      color: rgba(145, 145, 145, 0.8);
     }
   }
 

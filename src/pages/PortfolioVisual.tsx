@@ -129,6 +129,20 @@ const PortfolioVisual: React.FC = () => {
           }
           title="case 16"
         />
+        <CaseCard
+          linkTo="/case17"
+          img={
+            "https://res.cloudinary.com/deqblcqj7/image/upload/v1753440699/photo_2025-07-25_13-51-06_egp3su.png"
+          }
+          title="case 17"
+        />
+        <CaseCard
+          linkTo="/case18"
+          img={
+            "https://res.cloudinary.com/deqblcqj7/image/upload/v1753440755/photo_2025-07-25_13-52-17_z8vl7m.jpg"
+          }
+          title="case 18"
+        />
       </div>
       <Footer />
     </>

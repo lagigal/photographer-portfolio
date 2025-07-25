@@ -40,3 +40,5 @@ export const Gallery: React.FC<GalleryProps> = ({ images, videos }) => {
     </>
   );
 };
+
+export default Gallery;

@@ -8,7 +8,7 @@ import About from './pages/About';
 import PortfolioPhoto from './pages/PortfolioPhoto';
 import PortfolioReels from './pages/PortfolioReels.tsx';
 import PortfolioVisual from './pages/PortfolioVisual.tsx';
-import { Gallery } from './components/Gallery';
+import Gallery from './components/Gallery';
 import ScrollToTop from './components/ScrollToTop.tsx';
 
 import anastasiyaImages from "./Photos/anastasia.ts";
@@ -20,9 +20,13 @@ import jewelryBrandImages from "./Photos/jewelry-brand.ts";
 import TatianaMedia from "./Photos/tatiana.ts";
 import cosmetology from './Photos/cosmetology.ts';
 import ekaterina from './Photos/сatherine.ts';
+import lina from './Photos/lina.ts';
 
 import mySelfReels from "./Reels/my-self.ts";
 import filtihReels from "./Reels/filtih.ts";
+import sansusiReels from "./Reels/sansusi.ts"
+import kediReels from "./Reels/kedi-myasoeda.ts"
+import ambroperfumeReels from "./Reels/ambroperfume.ts"
 
 import case1 from "./Visual/case1.ts";
 import case2 from "./Visual/case2.ts";
@@ -40,6 +44,9 @@ import case13 from "./Visual/case13.ts";
 import case14 from "./Visual/case14.ts";
 import case15 from "./Visual/case15.ts";
 import case16 from "./Visual/case16.ts";
+import case17 from "./Visual/case17.ts";
+import case18 from "./Visual/case18.ts";
+
 
 
 const App: React.FC = () => {
@@ -63,9 +70,13 @@ const App: React.FC = () => {
         <Route path='/tatiana' element={<Gallery videos={TatianaMedia.videos}/> }/>
         <Route path='/cosmetology' element={<Gallery images={cosmetology.photos} videos={cosmetology.videos}/> }/>
         <Route path='/ekaterina' element={<Gallery images={ekaterina.photos} videos={ekaterina.videos}/> }/>
+        <Route path='/lina' element={<Gallery images={lina.photos}/> }/>
 
         <Route path='/my-self' element={<Gallery videos={mySelfReels}/>}/>
         <Route path='/filtih' element={<Gallery videos={filtihReels}/>}/>
+        <Route path='/sansusi' element={<Gallery videos={sansusiReels}/>}/>
+        <Route path='/kedi-myasoeda' element={<Gallery videos={kediReels}/>}/>
+        <Route path='/ambroperfume' element={<Gallery videos={ambroperfumeReels}/>}/>
 
         <Route path='/case1' element={<Gallery images={case1}/>}/>
         <Route path='/case2' element={<Gallery images={case2}/>}/>
@@ -83,6 +94,8 @@ const App: React.FC = () => {
         <Route path='/case14' element={<Gallery images={case14}/>}/>
         <Route path='/case15' element={<Gallery images={case15}/>}/>
         <Route path='/case16' element={<Gallery images={case16}/>}/>
+        <Route path='/case17' element={<Gallery images={case17}/>}/>
+        <Route path='/case18' element={<Gallery images={case18}/>}/>
       </Routes>
     </Router>
   );
