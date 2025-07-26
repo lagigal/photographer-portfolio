@@ -93,10 +93,10 @@ const Header: React.FC = () => {
                   <Link to="/portfolio/visual">Визуальные концепции</Link>
                 </li>
                 <li className="header__dropdown-menu-li">
-                  <Link to="/portfolio/mobile">Мобильные съемки</Link>
+                  <Link to="/portfolio/mobile">Мобильная съемка</Link>
                 </li>
                 <li className="header__dropdown-menu-li">
-                  <Link to="/portfolio/reels">Рилсмейкер</Link>
+                  <Link to="/portfolio/reels">Видеосъемка и монтаж</Link>
                 </li>
               </ul>
             </div>
