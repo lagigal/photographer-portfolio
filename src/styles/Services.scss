@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Marck+Script&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Marck+Script&display=swap');
 
 .services {
   background-color: rgb(255, 252, 247);
@@ -8,7 +8,7 @@
   color: #333;
 
   &__title {
-    font-family: "Forum";
+    font-family: 'Forum';
     font-size: 2rem;
     font-weight: bold;
     color: #333;
@@ -41,7 +41,7 @@
     border: 1px solid #ddd;
 
     &__title {
-      font-family: "Caveat", cursive;
+      font-family: 'Caveat', cursive;
       font-optical-sizing: auto;
       font-weight: 700;
       font-style: normal;

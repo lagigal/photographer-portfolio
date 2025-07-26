@@ -17,7 +17,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
   &__logo {
-    font-family: "Forum";
+    font-family: 'Forum';
     font-size: 2rem;
     font-weight: bold;
     a {
@@ -44,7 +44,9 @@
       height: 1px;
       background-color: #333;
       margin: 2px 0;
-      transition: transform 0.3s ease, opacity 0.1s ease,
+      transition:
+        transform 0.3s ease,
+        opacity 0.1s ease,
         background-color 0.3s ease;
     }
 
@@ -87,7 +89,7 @@
 
         a,
         .header__link {
-          font-family: "Forum";
+          font-family: 'Forum';
           font-size: 1.3rem;
           text-decoration: none;
           color: #555;
@@ -99,7 +101,7 @@
           }
 
           &::before {
-            content: "";
+            content: '';
             position: absolute;
             left: -20%;
             top: 0;
@@ -108,7 +110,7 @@
           }
 
           &::after {
-            content: "";
+            content: '';
             position: absolute;
             left: 50%;
             bottom: 0;
@@ -140,7 +142,9 @@
       z-index: 20;
       opacity: 0;
       transform: translateY(-10px);
-      transition: opacity 0.3s ease, transform 0.3s ease;
+      transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
 
       display: flex;
       flex-direction: column;
@@ -194,7 +198,9 @@
 
       opacity: 0;
       transform: translateX(-100%);
-      transition: opacity 0.5s ease, transform 0.5s ease;
+      transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
 
       ul {
         display: flex;

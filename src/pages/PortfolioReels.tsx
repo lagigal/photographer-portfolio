@@ -1,8 +1,8 @@
-import CaseCard from "../components/CaseCard";
-import Footer from "../components/Footer";
-import GoBackButton from "../components/GoBackButton";
-import Header from "../components/Header";
-import "../styles/PortfolioPhoto.scss";
+import CaseCard from '../components/CaseCard';
+import Footer from '../components/Footer';
+import GoBackButton from '../components/GoBackButton';
+import Header from '../components/Header';
+import '../styles/PortfolioPhoto.scss';
 
 const PortfolioReels: React.FC = () => {
   return (

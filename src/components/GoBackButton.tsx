@@ -1,5 +1,5 @@
-import { useNavigate } from "react-router-dom";
-import "../styles/GoBackButton.scss";
+import { useNavigate } from 'react-router-dom';
+import '../styles/GoBackButton.scss';
 
 export const GoBackButton: React.FC = () => {
   const navigate = useNavigate();

@@ -5,15 +5,15 @@
 // Навигация по разделам (например, "Портфолио", "Услуги и цены", "Контакты", "Обо мне").
 // Мобильная версия, где меню сворачивается в выпадающий список.
 
-import React, { useEffect, useRef, useState } from "react";
-import "../styles/Header.scss";
-import { Link } from "react-router-dom";
+import React, { useEffect, useRef, useState } from 'react';
+import '../styles/Header.scss';
+import { Link } from 'react-router-dom';
 const Header: React.FC = () => {
   const headerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     if (headerRef.current) {
-      headerRef.current.classList.add("header--visible");
+      headerRef.current.classList.add('header--visible');
     }
   }, []);
 
@@ -21,21 +21,21 @@ const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
   function lockScroll() {
-    document.body.style.position = "fixed";
-    document.body.style.top = "0";
-    document.body.style.left = "0";
-    document.body.style.right = "0";
-    document.body.style.overflow = "hidden";
-    document.body.style.width = "100%";
+    document.body.style.position = 'fixed';
+    document.body.style.top = '0';
+    document.body.style.left = '0';
+    document.body.style.right = '0';
+    document.body.style.overflow = 'hidden';
+    document.body.style.width = '100%';
   }
 
   function unlockScroll() {
-    document.body.style.position = "";
-    document.body.style.top = "";
-    document.body.style.left = "";
-    document.body.style.right = "";
-    document.body.style.overflow = "";
-    document.body.style.width = "";
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.left = '';
+    document.body.style.right = '';
+    document.body.style.overflow = '';
+    document.body.style.width = '';
   }
 
   useEffect(() => {
@@ -66,17 +66,12 @@ const Header: React.FC = () => {
           width="45"
         />
       </div>
-      <button
-        className={`header__burger ${isMobileMenuOpen ? "active" : ""}`}
-        onClick={toggleMobileMenu}
-      >
+      <button className={`header__burger ${isMobileMenuOpen ? 'active' : ''}`} onClick={toggleMobileMenu}>
         <span className="header__burger-line"></span>
         <span className="header__burger-line"></span>
         <span className="header__burger-line"></span>
       </button>
-      <nav
-        className={`header__nav ${isMobileMenuOpen ? "header__nav--open" : ""}`}
-      >
+      <nav className={`header__nav ${isMobileMenuOpen ? 'header__nav--open' : ''}`}>
         <ul className="header__nav-list">
           <li>
             <div className="header__dropdown">
@@ -87,18 +82,10 @@ const Header: React.FC = () => {
                 onMouseLeave={isMobileMenuOpen ? () => {} : () => setIsPortfolioOpen(false)}
               >
                 Портфолио
-                <span
-                  className={`header__arrow ${
-                    isPortfolioOpen ? "header__arrow--open" : ""
-                  }`}
-                >
-                  ↓
-                </span>
+                <span className={`header__arrow ${isPortfolioOpen ? 'header__arrow--open' : ''}`}>↓</span>
               </span>
               <ul
-                className={`header__dropdown-menu ${
-                  isPortfolioOpen ? "header__dropdown-menu--visible" : ""
-                }`}
+                className={`header__dropdown-menu ${isPortfolioOpen ? 'header__dropdown-menu--visible' : ''}`}
                 onMouseEnter={() => setIsPortfolioOpen(true)}
                 onMouseLeave={() => setIsPortfolioOpen(false)}
               >
