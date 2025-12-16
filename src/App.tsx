@@ -82,6 +82,7 @@ const App: React.FC = () => {
           <Route path="/cosmetology" element={<GalleryLoader modulePath="./Photos/cosmetology.ts" />} />
           <Route path="/ekaterina" element={<GalleryLoader modulePath="./Photos/сatherine.ts" />} />
           <Route path="/lina" element={<GalleryLoader modulePath="./Photos/lina.ts" />} />
+          <Route path="/titto" element={<GalleryLoader modulePath="./Photos/titto.ts" />} />
 
           {/* Галереи с Reels */}
           <Route path="/my-self" element={<GalleryLoader modulePath="./Reels/my-self.ts" />} />
