@@ -89,6 +89,16 @@ const App: React.FC = () => {
           <Route path="/sansusi" element={<GalleryLoader modulePath="./Reels/sansusi.ts" />} />
           <Route path="/kedi-myasoeda" element={<GalleryLoader modulePath="./Reels/kedi-myasoeda.ts" />} />
           <Route path="/ambroperfume" element={<GalleryLoader modulePath="./Reels/ambroperfume.ts" />} />
+          <Route path="/forte-dei-mommy" element={<GalleryLoader modulePath="./Reels/forte-dei-mommy.ts" />} />
+          <Route path="/gorky-village-540" element={<GalleryLoader modulePath="./Reels/gorky-village-540.ts" />} />
+          <Route path="/more-prevention" element={<GalleryLoader modulePath="./Reels/more-prevention.ts" />} />
+          <Route path="/ilios" element={<GalleryLoader modulePath="./Reels/ilios.ts" />} />
+          <Route path="/lamont" element={<GalleryLoader modulePath="./Reels/lamont.ts" />} />
+          <Route path="/love-stories" element={<GalleryLoader modulePath="./Reels/love-stories.ts" />} />
+          <Route path="/original" element={<GalleryLoader modulePath="./Reels/original.ts" />} />
+          <Route path="/posolstvo-sochi" element={<GalleryLoader modulePath="./Reels/posolstvo-sochi.ts" />} />
+          <Route path="/agoy-park" element={<GalleryLoader modulePath="./Reels/agoy-park.ts" />} />
+          <Route path="/tensegrity-pilates" element={<GalleryLoader modulePath="./Reels/tensegrity-pilates.ts" />} />
 
           {/* Галереи с кейсами (Visual) */}
           <Route path="/case1" element={<GalleryLoader modulePath="./Visual/case1.ts" />} />
