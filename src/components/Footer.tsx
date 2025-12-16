@@ -24,7 +24,7 @@ const Footer: React.FC<FooterProps> = ({ withButtons = true }) => {
       </div>
       {withButtons && (
         <div className="footer__buttons">
-          <button className="footer__button" onClick={() => window.open('https://t.me/darbth', '_blank')} role="link">
+          <button className="footer__button" onClick={() => window.open('https://t.me/dddarni', '_blank')} role="link">
             Договориться о съемке
             <img src={tleg} alt="Telegram Icon" />
           </button>

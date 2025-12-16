@@ -1,4 +1,3 @@
-// +- (Главная страница): Здесь ты будешь использовать компоненты, такие как Header, PortfolioPreview и Footer для организации контента.
 import React from 'react';
 import '../styles/Home.scss';
 import Header from '../components/Header';
@@ -13,11 +12,11 @@ const Home: React.FC = () => {
       <div className="home">
         <div className="home__title-box">
           <h1 className="home__title">Дарья Никитенко</h1>
-          <p className="home__title-sub">content-creator | photographer</p>
+          <p className="home__title-sub">content-creator | videographer</p>
           <p className="home__title-sub">
-            Я @dashkens – креатор, визуализатор, рилсмейкер <br />
+            Я @dashkens – креатор, монтажер, рилсмейкер <br />
             занимаюсь созданием креативного, уникального контента для брендов и личных блогов, создаю визуалы,
-            продюсирую съёмки и снимаю рилсы. <br />В этой сфере я около 3-х лет, постоянно развиваюсь и обучаюсь
+            продюсирую съёмки и снимаю рилсы. <br />В этой сфере я более 3-х лет, постоянно развиваюсь и обучаюсь
             новому. Буду рада поработать с вами {`<3`}
           </p>
         </div>

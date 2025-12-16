@@ -1,4 +1,3 @@
-// (Страница с услугами и ценами): Страница с подробным описанием услуг и их стоимости.
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';

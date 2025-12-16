@@ -1,10 +1,8 @@
-// (Страница "Обо мне"): Страница с биографией фотографа и контактной информацией.
 import React from 'react';
 import '../styles/About.scss';
-import '../styles/Footer.scss';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import dashkensContacts from '../assets/dashkensContacts.jpg';
+import dashkensPhoto from '../assets/dashaPhoto.jpg';
 import GoBackButton from '../components/GoBackButton';
 import inst from '../assets/icons8-instagram.svg';
 import tleg from '../assets/icons8-telegram.svg';
@@ -21,7 +19,7 @@ const About: React.FC = () => {
         <img src="https://res.cloudinary.com/deqblcqj7/image/upload/v1740951624/IMG_1933_kcrm0s.png" width={50} />
       </h1>
       <div className="about__buttons">
-        <button className="about__button" onClick={() => window.open('https://t.me/darbth', '_blank')} role="link">
+        <button className="about__button" onClick={() => window.open('https://t.me/dddarni', '_blank')} role="link">
           Tелеграм
           <img src={tleg} alt="Telegram Icon" />
         </button>
@@ -35,7 +33,7 @@ const About: React.FC = () => {
         </button>
       </div>
       <div className="about__image-box">
-        <img className="about__image" src={dashkensContacts} />
+        <img className="about__image" src={dashkensPhoto} />
       </div>
       <Footer withButtons={false} />
     </>

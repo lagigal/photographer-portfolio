@@ -10,13 +10,6 @@ const PortfolioVisual: React.FC = () => {
       <Header />
       <GoBackButton />
       <div className="portfolioPhoto">
-        {/* <CaseCard
-        linkTo="/case1"
-        img={
-          "https://res.cloudinary.com/deqblcqj7/image/upload/v1733731817/5267048073488624623_rkwoaw.jpg"
-        }
-        title="case 1"
-      /> */}
         <CaseCard
           linkTo="/case1"
           img={'https://res.cloudinary.com/deqblcqj7/image/upload/v1733732524/5264796273674936428_rhlrda.jpg'}

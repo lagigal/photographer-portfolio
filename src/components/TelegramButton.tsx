@@ -7,7 +7,7 @@ interface TelegramButtonProps {
 
 const TelegramButton: React.FC<TelegramButtonProps> = ({ text }) => {
   return (
-    <button className="button" onClick={() => window.open('https://t.me/darbth', '_blank')} role="link">
+    <button className="button" onClick={() => window.open('https://t.me/dddarni', '_blank')} role="link">
       {text}
       <img src={tleg} alt="Telegram Icon" />
     </button>
